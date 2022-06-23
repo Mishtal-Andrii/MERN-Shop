@@ -1,0 +1,34 @@
+{
+  "name": "mern-shop",
+  "version": "1.0.0",
+  "description": "Mern shopping",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mishtal-Andrii/MERN-Shop.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mishtal-Andrii/MERN-Shop/issues"
+  },
+  "homepage": "https://github.com/Mishtal-Andrii/MERN-Shop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.2.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.4.0",
+    "nodemon": "^2.0.16"
+  }
+}
